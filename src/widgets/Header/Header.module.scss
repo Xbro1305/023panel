@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 15px var(--padding);
+
+  &_logo {
+    display: none;
+    @media (max-width: 760px) {
+      display: block;
+    }
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+
+    @media (max-width: 760px) {
+      display: none;
+    }
+  }
+
+  &_wallet {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  button {
+    display: none;
+    @media (max-width: 760px) {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      background: none;
+      border: none;
+
+      span {
+        width: 20px;
+        height: 3px;
+        background: white;
+      }
+    }
+  }
+}
