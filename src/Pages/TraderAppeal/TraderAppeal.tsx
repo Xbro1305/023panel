@@ -9,7 +9,6 @@ export const TraderAppeal = () => {
   const [sum, setSum] = useState<string>("2000");
   const [file] = useState<File>();
   const { id } = useParams();
-  const tokenType = localStorage.getItem("tokenType");
   const navigate = useNavigate();
 
   return (
