@@ -67,7 +67,8 @@ export const Sidebar = ({
             } medium ${styles.sidebar_links_item} sidebar_link`}
             to={RouterPaths.banks}
           >
-            <PiBankBold /> Банки
+            <PiBankBold />
+            <p>Банки</p>
           </Link>
           <Link
             className={` ${
