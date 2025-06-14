@@ -54,7 +54,7 @@ export const Sidebar = ({
             } medium ${styles.sidebar_links_item} sidebar_link`}
             to={
               tokenType == "trader"
-                ? RouterPaths.appeals
+                ? RouterPaths.traderAppeals
                 : RouterPaths.merchantAppeals
             }
           >

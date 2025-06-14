@@ -4,7 +4,7 @@ import check from "../../assets/appeals_check.png";
 import { toast } from "react-toastify";
 import { IoCopy } from "react-icons/io5";
 import { RouterPaths } from "../../App";
-import { Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const MerchantAppeals = () => {
   const navigate = useNavigate();
@@ -65,7 +65,7 @@ export const MerchantAppeals = () => {
           </thead>
           <tbody>
             {rows.map((row, idx) => (
-              <tr key={idx} onClick={() => navigate(RouterPaths.appeal + "20")}>
+              <tr key={idx} onClick={() => navigate(RouterPaths.merchantAppeals + "20")}>
                 <td
                   onClick={(e) => {
                     e.stopPropagation();

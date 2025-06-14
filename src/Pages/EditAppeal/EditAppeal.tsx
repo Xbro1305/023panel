@@ -17,11 +17,7 @@ export const EditAppeal = () => {
       <div className={styles.editAppeal_top}>
         <h1 className="h1_medium">
           <Link
-            to={
-              tokenType == "trader"
-                ? RouterPaths.appeals
-                : RouterPaths.merchantAppeals
-            }
+            to={RouterPaths.traderAppeals}
             style={{ color: "var(--text-secondary)" }}
           >
             Апелляции <FaChevronRight />

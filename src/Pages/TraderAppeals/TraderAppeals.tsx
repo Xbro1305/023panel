@@ -54,7 +54,10 @@ export const TraderAppeals = () => {
           </thead>
           <tbody>
             {rows.map((row, idx) => (
-              <tr key={idx} onClick={() => navigate(RouterPaths.appeal + "20")}>
+              <tr
+                key={idx}
+                onClick={() => navigate(RouterPaths.traderAppeals + "20")}
+              >
                 <td
                   onClick={(e) => {
                     e.stopPropagation();

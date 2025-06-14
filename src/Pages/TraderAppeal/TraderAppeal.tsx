@@ -1,13 +1,14 @@
 import { FaCheck, FaChevronRight } from "react-icons/fa";
 import styles from "../EditAppeal/EditAppeal.module.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { RouterPaths } from "../../App";
 import { useState } from "react";
 import { NumericFormat } from "react-number-format";
 
-export const NewAppeal = () => {
-  const [sum, setSum] = useState<string>();
-  const [file, setFile] = useState<File>();
+export const TraderAppeal = () => {
+  const [sum, setSum] = useState<string>("2000");
+  const [file] = useState<File>();
+  const { id } = useParams();
   const tokenType = localStorage.getItem("tokenType");
   const navigate = useNavigate();
 
@@ -16,16 +17,12 @@ export const NewAppeal = () => {
       <div className={styles.editAppeal_top}>
         <h1 className="h1_medium">
           <Link
-            to={
-              tokenType == "trader"
-                ? RouterPaths.traderAppeals
-                : RouterPaths.merchantAppeals
-            }
+            to={RouterPaths.traderAppeals}
             style={{ color: "var(--text-secondary)" }}
           >
             Апелляции <FaChevronRight />
           </Link>
-          Новая апелляция
+          Страница апелляции (ID {id})
         </h1>
         <button
           className="medium button-m-secondary"
@@ -39,7 +36,12 @@ export const NewAppeal = () => {
         <section>
           <p className="regular">Заказ</p>
           <span className="medium" style={{ color: "var(--blue-primary)" }}>
-            -
+            Заказ на{" "}
+            <NumericFormat
+              thousandSeparator=" "
+              value={sum}
+              displayType="text"
+            />
           </span>
         </section>
         <section className={styles.editAppeal_content_fileSection}>
@@ -50,6 +52,7 @@ export const NewAppeal = () => {
             thousandSeparator=" "
             value={sum}
             maxLength={11}
+            displayType="text"
             onChange={(e) => setSum(e.target.value)}
           />
         </section>{" "}
@@ -62,11 +65,11 @@ export const NewAppeal = () => {
         </section>
         <section>
           <p className="regular">Время создания</p>
-          <span className="medium"> -</span>
+          <span className="medium"> 18.05.2025 23:20</span>
         </section>{" "}
         <section>
           <p className="regular">Время успешного закрытия</p>
-          <span className="medium">-</span>
+          <span className="medium">18.05.2025 23:24</span>
         </section>
       </div>
       <div className={styles.editAppeal_content}>
@@ -76,34 +79,14 @@ export const NewAppeal = () => {
         >
           <p className="regular">Подтверждение</p>
           <label>
-            <span className="medium" style={{ color: "var(--blue-primary)" }}>
-              {file?.name}
-            </span>
-
-            <input
-              type="file"
-              multiple={false}
-              style={{ display: "none" }}
-              onChange={(e) => {
-                if (e.target.files && e.target.files[0]) {
-                  setFile(e.target.files[0]);
-                  console.log(e.target.files);
-                }
-              }}
-            />
             <span
-              className={
-                file ? "medium button-m-secondary" : "medium button-primary"
-              }
+              className="medium"
+              style={{ color: file ? "var(--blue-primary)" : "" }}
             >
-              {file ? "Другой файл" : "Добавить файл"}
+              {file?.name || "Файл отсутствует"}
             </span>
           </label>
         </section>
-      </div>
-      <div className={styles.editAppeal_buttons}>
-        <button className="medium green-button">Создать апелляцию</button>
-        <button className="medium red-button">Удалить</button>
       </div>
     </div>
   );
