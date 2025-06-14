@@ -14,6 +14,7 @@ const Router = () => {
       <ToastContainer />
       <Routes>
         <Route element={<Layout />}>
+          <Route path="/appeals" element={<Appeals />} />
           <Route path={RouterPaths.traderAppeals} element={<TraderAppeals />} />
           <Route
             path={RouterPaths.traderAppeals + ":id"}
@@ -48,9 +49,8 @@ const Appeals = () => {
   const navigate = useNavigate();
   const tokenType = localStorage.getItem("tokenType");
   useEffect(() => {
-    if (tokenType === "merchant") {
-      navigate(RouterPaths.merchantAppeals);
-    }
+    if (tokenType === "merchant") navigate(RouterPaths.merchantAppeals);
+    else navigate(RouterPaths.traderAppeals);
   }, [navigate, tokenType]);
   return null;
 };
