@@ -68,9 +68,13 @@
       background: var(--bg-secondary);
     }
 
+    tr {
+      background: var(--bg-secondary);
+    }
+
     tbody {
-      > :nth-child(even) {
-        background: var(--bg-secondary);
+      > :nth-child(odd) {
+        background: #26252a;
       }
 
       tr {

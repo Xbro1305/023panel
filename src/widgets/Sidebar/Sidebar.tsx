@@ -7,6 +7,7 @@ import { IoDocument } from "react-icons/io5";
 import { RouterPaths } from "../../App";
 import { LiaIdCard } from "react-icons/lia";
 import { FaChevronDown, FaUserCircle } from "react-icons/fa";
+import { PiBankBold } from "react-icons/pi";
 
 export const Sidebar = ({
   opened,
@@ -64,8 +65,10 @@ export const Sidebar = ({
             className={` ${
               !opened && styles.sidebar_links_item_disabled
             } medium ${styles.sidebar_links_item} sidebar_link`}
-            to=""
-          ></Link>
+            to={RouterPaths.banks}
+          >
+            <PiBankBold /> Банки
+          </Link>
           <Link
             className={` ${
               !opened && styles.sidebar_links_item_disabled

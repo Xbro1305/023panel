@@ -1,0 +1,47 @@
+.bank {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: var(--padding);
+
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 16px;
+    gap: 20px;
+    background: var(--bg-tertlary);
+    max-width: 512px;
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--bg-secondary);
+    }
+
+    > :last-child {
+      padding-bottom: 0;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+}

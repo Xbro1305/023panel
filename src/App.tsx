@@ -7,6 +7,8 @@ import { EditAppeal } from "./Pages/EditAppeal/EditAppeal";
 import { NewAppeal } from "./Pages/NewAppeal/NewAppeal";
 import { TraderAppeals } from "./Pages/TraderAppeals/TraderAppeals";
 import { TraderAppeal } from "./Pages/TraderAppeal/TraderAppeal";
+import { Banks } from "./Pages/Banks/Banks";
+import { Bank } from "./Pages/Bank/Bank";
 
 const Router = () => {
   return (
@@ -15,6 +17,8 @@ const Router = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/appeals" element={<Appeals />} />
+          <Route path={RouterPaths.banks} element={<Banks />} />
+          <Route path={RouterPaths.banks + ":id"} element={<Bank />} />
           <Route path={RouterPaths.traderAppeals} element={<TraderAppeals />} />
           <Route
             path={RouterPaths.traderAppeals + ":id"}
@@ -43,6 +47,7 @@ export const RouterPaths = {
   merchantAppeals: "/merchant-appeals/",
   traderAppeals: "/trader-appeals/",
   newAppeal: "/merchant-appeals/new",
+  banks: "/banks/",
 };
 
 const Appeals = () => {
