@@ -44,7 +44,7 @@ export const Sidebar = ({
           className={` ${
             !opened && styles.sidebar_links_item_disabled
           } medium ${styles.sidebar_links_item}`}
-          to=""
+          to={RouterPaths.balance}
         >
           <GrCreditCard /> <p>Баланс</p>
         </Link>
