@@ -11,7 +11,7 @@ export const Header = ({
 }) => {
   return (
     <header className={styles.header}>
-      <img src={logo} className={styles.heade_logo} alt="" />
+      <img src={logo} className={styles.header_logo} alt="" />
       <p className="regular">
         Текущий курс: <span className="medium">79,34</span>
       </p>

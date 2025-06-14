@@ -1,0 +1,109 @@
+.editAppeal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: var(--padding);
+  background: var(--bg-color);
+
+  &_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    h1 {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        text-decoration: none;
+      }
+    }
+
+    button {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--bg-tertlary);
+
+    > :last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+
+    > section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--bg-tertlary);
+
+      input {
+        background: var(--bg-tertlary);
+        border: 1px solid var(--text-secondary);
+        border-radius: 8px;
+        padding: 10px;
+        outline: none;
+      }
+
+      i {
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        gap: 5px;
+        padding: 2px 5px;
+        border-radius: 8px;
+        color: var(--green-primary);
+        background: var(--green-secondary);
+      }
+
+      p {
+        color: var(--text-secondary);
+      }
+    }
+
+    &_fileSection {
+      label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 20px;
+
+        label {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    @media (max-width: 540px) {
+      padding: var(--padding);
+    }
+  }
+
+  &_buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+}

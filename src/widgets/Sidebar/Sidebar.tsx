@@ -15,6 +15,7 @@ export const Sidebar = ({
   opened: boolean;
   setOpened: (open: boolean) => void;
 }) => {
+  const tokenType = localStorage.getItem("tokenType");
   return (
     <>
       <div
@@ -51,7 +52,11 @@ export const Sidebar = ({
             className={` ${
               !opened && styles.sidebar_links_item_disabled
             } medium ${styles.sidebar_links_item} sidebar_link`}
-            to={RouterPaths.appeals}
+            to={
+              tokenType == "trader"
+                ? RouterPaths.appeals
+                : RouterPaths.merchantAppeals
+            }
           >
             <IoDocument /> <p>Аппеляции</p>
           </Link>

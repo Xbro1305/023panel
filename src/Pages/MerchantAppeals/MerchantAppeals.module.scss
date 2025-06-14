@@ -72,6 +72,10 @@
       > :nth-child(even) {
         background: var(--bg-secondary);
       }
+
+      tr {
+        cursor: pointer;
+      }
     }
 
     td {
