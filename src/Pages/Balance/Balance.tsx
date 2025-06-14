@@ -1,4 +1,4 @@
-import { FaPeopleCarry, FaPlay, FaUser } from "react-icons/fa";
+import { FaPause, FaPeopleCarry, FaPlay, FaUser } from "react-icons/fa";
 import styles from "./Balance.module.scss";
 import { SiTether } from "react-icons/si";
 import { NumericFormat } from "react-number-format";
@@ -7,9 +7,11 @@ import { IoCopy } from "react-icons/io5";
 import { toast } from "react-toastify";
 import { RouterPaths } from "../../App";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const Balance = () => {
   const navigate = useNavigate();
+  const [active, setActive] = useState(true);
   const rows = [
     {
       amount: 2000,
@@ -37,9 +39,21 @@ export const Balance = () => {
     <div className={styles.balance}>
       <div className={styles.balance_top}>
         <h1 className="h1_medium">Баланс</h1>
-        <button className="medium button-primary">
-          <FaPlay /> Трафик включён
-        </button>
+        {active ? (
+          <button
+            onClick={() => setActive(false)}
+            className="medium button-primary"
+          >
+            <FaPlay /> Трафик включён
+          </button>
+        ) : (
+          <button
+            onClick={() => setActive(true)}
+            className="medium button-m-secondary"
+          >
+            <FaPause /> Трафик выключён
+          </button>
+        )}
       </div>
       <div className={styles.balance_trader}>
         <div className={styles.balance_trader_block}>
