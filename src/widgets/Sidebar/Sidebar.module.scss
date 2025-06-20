@@ -5,6 +5,7 @@
   background: var(--modal-bg);
   padding: var(--padding);
   height: 100vh;
+  overflow: auto;
   position: sticky;
   top: 0;
   width: 100%;

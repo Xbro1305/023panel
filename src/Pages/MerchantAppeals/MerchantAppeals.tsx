@@ -86,7 +86,12 @@ export const MerchantAppeals = () => {
                       color: "var(--blue-primary)",
                     }}
                   >
-                    <IoCopy />
+                    <IoCopy
+                      style={{
+                        color: "var(--text-secondary)",
+                        transform: "rotate(270deg)",
+                      }}
+                    />
                     {row.id}
                   </span>
                 </td>

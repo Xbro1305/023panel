@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { IoCopy } from "react-icons/io5";
 import { RouterPaths } from "../../App";
 import { useNavigate } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 
 export const TraderAppeals = () => {
   const navigate = useNavigate();
@@ -40,9 +41,12 @@ export const TraderAppeals = () => {
           </p>
         </section>
       </section>
-
+      <section className={styles.appeals_search}>
+        <input className="medium" type="text" placeholder="Поиск по Order ID" />
+        <FaSearch />
+      </section>
       <div className={styles.appeals_table_container}>
-        <table className={styles.appeals_table}>
+        <table border={0} className={styles.appeals_table}>
           <thead>
             <tr>
               <td className="caption_regular">Order ID</td>
@@ -75,7 +79,12 @@ export const TraderAppeals = () => {
                       color: "var(--blue-primary)",
                     }}
                   >
-                    <IoCopy />
+                    <IoCopy
+                      style={{
+                        color: "var(--text-secondary)",
+                        transform: "rotate(270deg)",
+                      }}
+                    />
                     {row.id}
                   </span>
                 </td>

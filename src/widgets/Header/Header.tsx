@@ -1,4 +1,4 @@
-import { IoCopyOutline } from "react-icons/io5";
+import { IoCopy } from "react-icons/io5";
 import styles from "./Header.module.scss";
 import { FaChevronDown, FaUserCircle } from "react-icons/fa";
 import { toast } from "react-toastify";
@@ -25,7 +25,12 @@ export const Header = ({
       >
         Кошелёк:{" "}
         <span className="medium">TAzsQ9Gx8eqFNFSKbeXrbi45CuVPHzA8wr</span>{" "}
-        <IoCopyOutline />
+        <IoCopy
+          style={{
+            color: "var(--text-secondary)",
+            transform: "rotate(270deg)",
+          }}
+        />
       </p>
       <section>
         <span className="medium">username</span>{" "}

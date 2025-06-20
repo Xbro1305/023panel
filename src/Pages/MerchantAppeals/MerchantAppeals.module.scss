@@ -42,8 +42,8 @@
     padding: 10px 20px;
     border-radius: 8px;
     background: var(--bg-secondary);
-    border: 1px solid var(--bg-tertlary);
     color: var(--text-primary);
+    border: 1px solid var(--bg-tertlary);
 
     input {
       background: none;
@@ -67,10 +67,24 @@
     thead {
       color: var(--text-secondary);
       background: var(--bg-secondary);
+
+      tr > :nth-child(1) {
+        border: 1px solid var(--bg-tertlary);
+      }
+
+      td {
+        padding: 16px 32px 8px 32px !important;
+      }
     }
 
     tr {
       background: var(--bg-secondary);
+      border: 1px solid var(--bg-tertlary);
+
+      > :nth-child(1) {
+        border-right: 1px solid var(--bg-tertlary);
+        border-radius: 0;
+      }
     }
 
     tbody {
@@ -88,8 +102,8 @@
     }
 
     td {
-      border: 1px solid var(--bg-tertlary);
-      padding: 10px var(--padding);
+      padding: 10px 24px;
+      border-radius: 0;
       white-space: nowrap;
       flex-wrap: nowrap;
 
