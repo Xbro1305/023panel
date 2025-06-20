@@ -43,7 +43,7 @@ export const Sidebar = ({
         <NavLink
           className={` ${
             !opened && styles.sidebar_links_item_disabled
-          } medium ${styles.sidebar_links_item}`}
+          } medium ${styles.sidebar_links_item} sidebar_link`}
           to={RouterPaths.balance}
         >
           <GrCreditCard /> <p>Баланс</p>
