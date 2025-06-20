@@ -65,7 +65,10 @@ export const MerchantAppeals = () => {
           </thead>
           <tbody>
             {rows.map((row, idx) => (
-              <tr key={idx} onClick={() => navigate(RouterPaths.merchantAppeals + "20")}>
+              <tr
+                key={idx}
+                onClick={() => navigate(RouterPaths.merchantAppeals + "20")}
+              >
                 <td
                   onClick={(e) => {
                     e.stopPropagation();
@@ -90,7 +93,7 @@ export const MerchantAppeals = () => {
                 <td className="regular">{row.amount}</td>
                 <td className="regular">{row.createdAt}</td>
                 <td className="regular">{row.updatedAt}</td>
-                <td className="regular">
+                <td className={`${styles.appeals_table_status} medium`}>
                   {row.status === "processed" && (
                     <span
                       style={{
@@ -109,7 +112,7 @@ export const MerchantAppeals = () => {
                         background: "var(--red-secondary)",
                       }}
                     >
-                      &times; Закрыта
+                      <span> &times; </span> Закрыта
                     </span>
                   )}
                   {row.status === "open" && (
@@ -119,7 +122,7 @@ export const MerchantAppeals = () => {
                         background: "var(--blue-secondary)",
                       }}
                     >
-                      ! Открыта
+                      <span>!</span> Открыта
                     </span>
                   )}
                 </td>

@@ -79,6 +79,10 @@
 
       tr {
         cursor: pointer;
+
+        &:hover {
+          background: var(--bg-color);
+        }
       }
     }
 
@@ -98,6 +102,17 @@
         gap: 5px;
         padding: 3px 10px;
         border-radius: 8px;
+      }
+    }
+
+    &_status {
+      span {
+        gap: 10px !important;
+
+        span {
+          font-size: 20px;
+          padding: 0;
+        }
       }
     }
   }

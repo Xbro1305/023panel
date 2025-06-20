@@ -110,6 +110,10 @@ h2.semi-bold {
   border-bottom: 2px solid var(--text-active);
 }
 
+.sidebar_link.active p {
+  color: var(--text-primary) !important;
+}
+
 .sidebar_link.active svg {
   color: var(--text-active);
 }

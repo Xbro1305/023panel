@@ -9,12 +9,26 @@
     align-items: center;
     gap: 5px;
 
-    a {
+    span {
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    a,
+    span {
       color: var(--text-secondary);
-      text-decoration: none;
+    }
+
+    a {
       display: flex;
       align-items: center;
       gap: 5px;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--text-primary) !important;
+      }
     }
   }
 

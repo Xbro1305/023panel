@@ -82,7 +82,7 @@ export const TraderAppeals = () => {
                 <td className="regular">{row.amount}</td>
                 <td className="regular">{row.createdAt}</td>
                 <td className="regular">{row.updatedAt}</td>
-                <td className="regular">
+                <td className={`${styles.appeals_table_status} medium`}>
                   {row.status === "processed" && (
                     <span
                       style={{
@@ -101,7 +101,7 @@ export const TraderAppeals = () => {
                         background: "var(--red-secondary)",
                       }}
                     >
-                      &times; Закрыта
+                      <span> &times;</span> Закрыта
                     </span>
                   )}
                   {row.status === "open" && (
@@ -111,7 +111,7 @@ export const TraderAppeals = () => {
                         background: "var(--blue-secondary)",
                       }}
                     >
-                      ! Открыта
+                      <span>!</span> Открыта
                     </span>
                   )}
                 </td>

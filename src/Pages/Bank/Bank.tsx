@@ -7,9 +7,10 @@ export const Bank = () => {
   return (
     <div className={styles.bank}>
       <h1 className="h1_medium">
-        <Link to={RouterPaths.banks}>
-          Банки <FaChevronRight />
-        </Link>
+        <Link to={RouterPaths.banks}>Банки</Link>
+        <span >
+          <FaChevronRight />
+        </span>
         СБЕР (СБП)
       </h1>
       <div className={styles.bank_content}>

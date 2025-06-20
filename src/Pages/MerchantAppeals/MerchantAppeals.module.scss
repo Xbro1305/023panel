@@ -41,7 +41,8 @@
     justify-content: space-between;
     padding: 10px 20px;
     border-radius: 8px;
-    background: var(--bg-tertlary);
+    background: var(--bg-secondary);
+    border: 1px solid var(--bg-tertlary);
     color: var(--text-primary);
 
     input {
@@ -79,6 +80,10 @@
 
       tr {
         cursor: pointer;
+
+        &:hover {
+          background: var(--bg-color);
+        }
       }
     }
 
@@ -98,6 +103,17 @@
         gap: 5px;
         padding: 3px 10px;
         border-radius: 8px;
+      }
+    }
+
+    &_status {
+      span {
+        gap: 10px !important;
+
+        span {
+          font-size: 20px;
+          padding: 0;
+        }
       }
     }
   }

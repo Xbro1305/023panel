@@ -28,7 +28,7 @@
       border: 1px solid var(--bg-tertlary);
       background: var(--bg-secondary);
       border-radius: 16px;
-      gap: 5px;
+      gap: 16px;
 
       > span {
         color: var(--text-secondary);
@@ -44,7 +44,7 @@
       p {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 16px;
       }
     }
 

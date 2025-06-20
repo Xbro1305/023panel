@@ -23,8 +23,12 @@ export const NewAppeal = () => {
             }
             style={{ color: "var(--text-secondary)" }}
           >
-            Апелляции <FaChevronRight />
+            Апелляции
           </Link>
+          <span style={{ color: "var(--text-secondary)" }}>
+            {" "}
+            <FaChevronRight />
+          </span>
           Новая апелляция
         </h1>
         <button

@@ -50,7 +50,12 @@ export const Banks = () => {
           <tbody>
             {rows.map((row, idx) => (
               <tr key={idx} onClick={() => navigate(RouterPaths.banks + "1")}>
-                <td className="regular">{row.title}</td>
+                <td
+                  style={{ color: "var(--blue-primary)" }}
+                  className="regular"
+                >
+                  {row.title}
+                </td>
                 <td className="regular">{row.phone}</td>
               </tr>
             ))}{" "}

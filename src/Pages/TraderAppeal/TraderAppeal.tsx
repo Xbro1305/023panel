@@ -19,8 +19,11 @@ export const TraderAppeal = () => {
             to={RouterPaths.traderAppeals}
             style={{ color: "var(--text-secondary)" }}
           >
-            Апелляции <FaChevronRight />
+            Апелляции
           </Link>
+          <span style={{ color: "var(--text-secondary)" }}>
+            <FaChevronRight />
+          </span>
           Страница апелляции (ID {id})
         </h1>
         <button

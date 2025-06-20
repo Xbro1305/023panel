@@ -26,6 +26,10 @@
     }
   }
 
+  p {
+    color: var(--text-secondary);
+  }
+
   &_wallet {
     @media (max-width: 1024px) {
       display: none;
