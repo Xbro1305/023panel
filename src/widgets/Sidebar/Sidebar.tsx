@@ -2,7 +2,7 @@ import styles from "./Sidebar.module.scss";
 import logo from "../../assets/Logotype.svg";
 import close from "../../assets/Vector.svg";
 import { GrCreditCard } from "react-icons/gr";
-import { NavLink as Link } from "react-router-dom";
+import { NavLink as Link, NavLink } from "react-router-dom";
 import { IoDocument } from "react-icons/io5";
 import { RouterPaths } from "../../App";
 import { LiaIdCard } from "react-icons/lia";
@@ -40,16 +40,16 @@ export const Sidebar = ({
           <FaChevronDown style={{ color: "white" }} />
         </section>
 
-        <Link
+        <NavLink
           className={` ${
             !opened && styles.sidebar_links_item_disabled
           } medium ${styles.sidebar_links_item}`}
           to={RouterPaths.balance}
         >
           <GrCreditCard /> <p>Баланс</p>
-        </Link>
+        </NavLink>
         <section className={styles.sidebar_links}>
-          <Link
+          <NavLink
             className={` ${
               !opened && styles.sidebar_links_item_disabled
             } medium ${styles.sidebar_links_item} sidebar_link`}
@@ -60,8 +60,8 @@ export const Sidebar = ({
             }
           >
             <IoDocument /> <p>Аппеляции</p>
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             className={` ${
               !opened && styles.sidebar_links_item_disabled
             } medium ${styles.sidebar_links_item} sidebar_link`}
@@ -69,7 +69,7 @@ export const Sidebar = ({
           >
             <PiBankBold />
             <p>Банки</p>
-          </Link>
+          </NavLink>
           <Link
             className={` ${
               !opened && styles.sidebar_links_item_disabled
