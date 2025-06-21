@@ -62,6 +62,7 @@
 
 .button-primary {
   background: var(--text-active);
+  color: var(--modal-bg);
   padding: 12px 24px;
   border-radius: 8px;
   border: none;

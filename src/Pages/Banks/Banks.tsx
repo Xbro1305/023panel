@@ -43,7 +43,9 @@ export const Banks = () => {
         <table className={styles.banks_table}>
           <thead>
             <tr>
-              <td className="caption_regular">Название банка</td>
+              <td className="caption_regular" style={{ width: "100%" }}>
+                Название банка
+              </td>
               <td className="caption_regular">Номер телефона банка</td>
             </tr>
           </thead>
