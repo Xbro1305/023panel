@@ -87,7 +87,7 @@ export const Balance = () => {
               displayType="text"
               decimalSeparator="."
               thousandSeparator=" "
-              value={1234.56}
+              value={1973513356.8663383}
             />
           </p>
         </div>
@@ -123,12 +123,12 @@ export const Balance = () => {
               displayType="text"
               decimalSeparator="."
               thousandSeparator=" "
-              value={12345.67}
+              value={521422.1235451}
             />
           </p>
         </div>
       </div>
-      <div className={styles.balance_merchant}>
+      {/* <div className={styles.balance_merchant}>
         <div className={styles.balance_trader_block}>
           <span className="medium">Баланс USDT</span>
           <p className="h1_medium">
@@ -161,7 +161,7 @@ export const Balance = () => {
               displayType="text"
               decimalSeparator="."
               thousandSeparator=" "
-              value={1234.56}
+              value={1973513356.8663383}
             />
           </p>
         </div>
@@ -301,7 +301,7 @@ export const Balance = () => {
             ))}{" "}
           </tbody>
         </table>
-      </div>
+      </div> */}
     </div>
   );
 };

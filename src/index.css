@@ -29,7 +29,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0%;
+  letter-spacing: 6%;
   color: var(--text-primary);
 }
 
@@ -63,7 +63,7 @@
 .button-primary {
   background: var(--text-active);
   color: var(--modal-bg);
-  padding: 12px 24px;
+  padding: 12px 30px;
   border-radius: 8px;
   border: none;
   display: flex;
@@ -109,7 +109,7 @@ h2.semi-bold {
 
 .sidebar_link.active {
   background: var(--bg-secondary);
-  border-bottom: 2px solid var(--text-active);
+  border-bottom: 1px solid var(--text-active);
 }
 
 .sidebar_link.active p {
