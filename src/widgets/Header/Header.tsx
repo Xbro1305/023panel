@@ -1,6 +1,5 @@
 import { IoCopy } from "react-icons/io5";
 import styles from "./Header.module.scss";
-import { FaChevronDown, FaUserCircle } from "react-icons/fa";
 import { toast } from "react-toastify";
 import logo from "../../assets/Logotype.svg";
 

@@ -128,7 +128,7 @@ export const Balance = () => {
           </p>
         </div>
       </div>
-      {/* <div className={styles.balance_merchant}>
+      <div className={styles.balance_merchant}>
         <div className={styles.balance_trader_block}>
           <span className="medium">Баланс USDT</span>
           <p className="h1_medium">
@@ -301,7 +301,7 @@ export const Balance = () => {
             ))}{" "}
           </tbody>
         </table>
-      </div> */}
+      </div>
     </div>
   );
 };
