@@ -5,8 +5,8 @@ import styles from "./Layout.module.scss";
 import { Outlet } from "react-router-dom";
 
 export const Layout = () => {
-  const [open, setOpen] = useState(true);
   const [width, setWidth] = useState(window.innerWidth);
+  const [open, setOpen] = useState(window.innerWidth <= 1024 ? false : true);
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);

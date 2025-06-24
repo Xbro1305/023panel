@@ -50,7 +50,7 @@ export const Balance = () => {
             onClick={() => setActive(true)}
             className="medium button-m-secondary"
           >
-            <FaPause /> Трафик выключён
+            <FaPause /> Трафик выключeн
           </button>
         )}
       </div>

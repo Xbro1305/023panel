@@ -11,4 +11,9 @@
     transition: all 0.3s ease;
     background: var(--bg-color);
   }
+
+  @media (max-width: 1024px) {
+    height: 100vh !important;
+    min-height: 0;
+  }
 }

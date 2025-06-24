@@ -24,6 +24,18 @@
   --padding: 24px;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --padding: 12px;
+  }
+}
+
 .medium {
   font-family: Geologica;
   font-weight: 500;
@@ -63,7 +75,7 @@
 .button-primary {
   background: var(--text-active);
   color: var(--modal-bg);
-  padding: 12px 30px;
+  padding: 12px 30.5px;
   border-radius: 8px;
   border: none;
   display: flex;
@@ -74,7 +86,7 @@
 
 .button-m-secondary {
   border-radius: 8px;
-  padding: 12px 16px;
+  padding: 12px 24px;
   background: var(--bg-tertlary);
   border: none;
   cursor: pointer;

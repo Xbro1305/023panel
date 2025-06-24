@@ -181,7 +181,7 @@ export const Sidebar = ({
                 fill="currentColor"
               ></path>
             </svg>
-            <p>История операций</p>
+            <p>История&nbsp;операций</p>
           </Link>{" "}
           <Link
             className={` ${
